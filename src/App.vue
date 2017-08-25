@@ -1,17 +1,17 @@
 <template>
   <div id="app">
     <img src="./assets/logo.png">
-    <constructor></constructor>
+    <constructor-frame></constructor-frame>
   </div>
 </template>
 
 <script>
-import Constructor from './components/constructor'
+import constructorFrame from './components/constructor/Constructor-Frame'
 
 export default {
   name: 'app',
   components: {
-    Constructor
+    constructorFrame
   }
 }
 </script>
