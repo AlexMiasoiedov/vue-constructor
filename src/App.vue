@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import constructorFrame from './components/constructor/Constructor-Frame'
+import constructorFrame from './components/constructor/constructor-frame'
 
 export default {
   name: 'app',
