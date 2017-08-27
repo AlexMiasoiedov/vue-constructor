@@ -2,42 +2,20 @@
   <div id="constructor-frame">
     <h3>Constructor</h3>
     <div id="frame-body" v-for="txtField in txtFields">
-      <component is="txtField" v-on:remove-txt-block="removeTxtChild" v-bind:message="txtField.message"></component>
+      <component
+        is="txtField"
+        v-on:remove-txt-block="removeTxtChild"
+        v-on:updateTxtField="updateTxtField"
+        v-bind:key="txtField.id"
+        v-bind:id="txtField.id"
+        v-bind:message="txtField.message"
+      ></component>
     </div>
     <button v-on:click="addTxtBlock">Add TextField</button>
   </div>
 </template>
 
-<script>
-  import txtField from './txt-field'
-
-  export default {
-    name: 'constructor-frame',
-
-    components: {
-      txtField
-    },
-
-    methods: {
-      addTxtBlock: function (e) {
-        e.preventDefault()
-        this.txtFields.push({ message: '' })
-      },
-      removeTxtChild: function (elem) {
-        console.log(elem)
-      }
-    },
-
-    data: function () {
-      return {
-        txtFields: [
-          { message: 'text message 1' },
-          { message: 'text message 2' }
-        ]
-      }
-    }
-  }
-</script>
+<script src="./constructor-frame.js"></script>
 
 <style scoped>
   #constructor-frame {
