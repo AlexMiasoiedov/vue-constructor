@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import constructorFrame from './components/constructor/constructor-frame'
+import constructorFrame from './components/constructor/constructor-frame.vue'
 
 export default {
   name: 'app',
