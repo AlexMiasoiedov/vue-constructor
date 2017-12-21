@@ -24,20 +24,13 @@ export default {
       }
     },
 
-    incrementWidth: function () {
-      this.styleObject.width = parseInt(this.styleObject.width) + 1
-    },
+    changeProportions: function(prop, typ) {
+      const operations = {
+        "inc": function(prop) { this.styleObject[prop] = parseInt(this.styleObject[prop]) + 1 },
+        "dec": function(prop) { this.styleObject[prop] = parseInt(this.styleObject[prop]) - 1 }
+      }
 
-    decrementWidth: function () {
-      this.styleObject.width = parseInt(this.styleObject.width) - 1
-    },
-
-    incrementHeight: function () {
-      this.styleObject.height = parseInt(this.styleObject.height) + 1
-    },
-
-    decrementHeight: function () {
-      this.styleObject.height = parseInt(this.styleObject.height) - 1
+      operations[typ].bind(this)(prop);
     }
   },
 

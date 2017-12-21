@@ -6,14 +6,14 @@
     <p>{{mutableMessage}}</p>
 
     Width:
-    <button v-on:click="incrementWidth()">+</button>
+    <button v-on:click="changeProportions('width', 'inc')">+</button>
     {{styleObject.width}}%
-    <button v-on:click="decrementWidth()">-</button>
+    <button v-on:click="changeProportions('width', 'dec')">-</button>
     <br/>
     Height:
-    <button v-on:click="incrementHeight()">+</button>
+    <button v-on:click="changeProportions('height', 'inc')">+</button>
     {{styleObject.height}}px
-    <button v-on:click="decrementHeight()">-</button>
+    <button v-on:click="changeProportions('height', 'dec')">-</button>
   </div>
 </template>
 
